@@ -1,0 +1,90 @@
+*{
+    background: color #f4f0fa;
+    font-family: 'inter',sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Garante que nada escape para os lados */
+    width: 100%;
+    background: linear-gradient(180deg, 
+        #301934 0%,   /* Roxo Escuro (Header) */
+        #D3108F 50%,  /* Rosa Vibrante */
+        #FF8C42 100%  /* Laranja Suave */
+    );
+    background-attachment: fixed; /* O fundo fica parado ao rolar a página */
+    min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
+    margin: 0;
+}
+/* menu inicial */
+.menu{
+    background-color:rgb(48, 25, 52) ;
+    color:#f4f0fa ;
+    
+}
+nav {
+    display: flex;
+    justify-content:space-around; 
+    align-items: center;            
+    padding: 10px 30px;             
+}
+nav img{
+    width: 170px;
+    padding-left: 110px;
+}
+.menu a{
+    color: #f4f0fa;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    text-decoration: none;
+    padding: 15px;
+    list-style: none;
+
+}
+.pages, icon{
+    list-style: none;
+    /* border: yellow solid; */
+    display: flex;
+    justify-content: center ;
+    align-items: center; 
+
+
+
+}
+
+.pages a:hover{
+    color:#e9c5ad;
+
+}
+.icon{
+    list-style: none;
+    /* border: yellow solid; */
+    display: flex;
+    justify-content: flex-end ;
+    align-items: center;  
+
+}
+.icon a:hover{
+     color:#e9c5ad;
+}
+
+main{
+    flex: 1;
+}
+footer{
+    background-color:rgb(48, 25, 52) ;
+    color: #f4f0fa;
+    padding: 80px;
+    text-align: center;
+
+}

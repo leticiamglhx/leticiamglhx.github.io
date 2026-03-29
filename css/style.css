@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden; /* Garante que nada escape para os lados */
     width: 100%;
@@ -94,7 +97,8 @@ li a {
 .content h2{
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
+    
 
 }
 .content h3{
@@ -124,10 +128,15 @@ li a {
     text-align: justify;
     color:#301934;
 }
+main{
+    flex: 1;
+}
 footer{
     background-color:rgb(48, 25, 52) ;
     color: #f4f0fa;
     padding: 80px;
     text-align: center;
+    justify-content:end;
+
 
 }
