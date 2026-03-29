@@ -2,11 +2,17 @@
     background: color #f4f0fa;
     font-family: 'inter',sans-serif;
     margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden; /* Garante que nada escape para os lados */
+    width: 100%;
 }
 /* menu inicial */
 .menu{
     background-color:rgb(48, 25, 52) ;
     color:#f4f0fa ;
+    
 }
 nav {
     display: flex;
@@ -18,10 +24,12 @@ nav img{
     width: 170px;
     padding-left: 110px;
 }
+.menu a{
+    color: #f4f0fa;
+}
 
 li a {
     text-decoration: none;
-    color: #f4f0fa;
     padding: 15px;
 
 }
@@ -50,4 +58,76 @@ li a {
 }
 .icon a:hover{
      color:#e9c5ad;
+}
+.banner img{
+    width: 100%;       /* Obriga a imagem a ter a largura da tela */
+    height: auto;      /* Mantém a proporção sem achatar */
+    display: block;
+}
+.content{
+    background: linear-gradient(180deg, 
+        #301934 0%,   /* Roxo Escuro (Header) */
+        #D3108F 50%,  /* Rosa Vibrante */
+        #FF8C42 100%  /* Laranja Suave */
+    );
+    background-attachment: fixed; /* O fundo fica parado ao rolar a página */
+    min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
+    margin: 0;
+
+}
+
+.content ul{
+    display: flex;
+    gap: 50px;
+    justify-content: center; /* Centraliza as caixas no meio da tela */
+     /* Alinha o topo delas */
+}
+
+.content img{
+    display: block;
+    margin: 0 auto 15px auto; 
+    width: 120px; /* Aumentei um pouquinho para destacar */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Deixa a foto redonda */
+}
+.content h2{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+}
+.content h3{
+    color: #301934;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.content li{
+    list-style:none;
+    background-color:#c3aec7;
+    border: #301934 solid 1px;
+    padding: 25px;
+    width: 450px;              /* AQUI você controla o tamanho do "quadrado" */
+    border-radius: 12px;       /* Pontas arredondadas ficam mais modernas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra bem levinha */
+}
+.content li:hover{
+    list-style:none;
+    background-color:#d0bcd3 ;
+    border: #301934 solid 1px;
+    padding: 25px;
+    width: 450px;              /* AQUI você controla o tamanho do "quadrado" */
+    border-radius: 12px;       /* Pontas arredondadas ficam mais modernas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra bem levinha */
+}
+.content p {
+    text-align: justify;
+    color:#301934;
+}
+footer{
+    background-color:rgb(48, 25, 52) ;
+    color: #f4f0fa;
+    padding: 80px;
+    text-align: center;
+
 }
