@@ -30,12 +30,9 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between; /* Espalha logo, links e ícones */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    justify-content: space-between
+    justify-content:space-around; 
+    align-items: center;            
+    padding: 10px 30px; 
 }
 
 /* Estilização das listas do menu */
@@ -47,8 +44,8 @@ nav ul {
 }
 
 nav img {
-    width: 150px; /* Ajuste o tamanho da logo aqui */
-    display: block;
+     width: 170px;
+    padding-left: 110px;
 }
 
 /* Links do menu */
