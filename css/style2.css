@@ -1,90 +1,148 @@
-*{
-    background: color #f4f0fa;
-    font-family: 'inter',sans-serif;
+/* --- RESET E GERAL --- */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Inter', sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
+    background-color: #f4f0fa; /* Corrigido de background: color */
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /* Garante que nada escape para os lados */
+    min-height: 100vh;
+    overflow-x: hidden;
     width: 100%;
-    background: linear-gradient(180deg, 
-        #301934 0%,   /* Roxo Escuro (Header) */
-        #D3108F 50%,  /* Rosa Vibrante */
-        #FF8C42 100%  /* Laranja Suave */
-    );
-    background-attachment: fixed; /* O fundo fica parado ao rolar a página */
-    min-height: 100vh; /* Garante que o fundo cubra a tela inteira */
-    margin: 0;
 }
-/* menu inicial */
-.menu{
-    background-color:rgb(48, 25, 52) ;
-    color:#f4f0fa ;
-    
+
+/* --- MENU INICIAL --- */
+.menu {
+    background-color: rgb(48, 25, 52);
+    width: 100%;
+    position: sticky; /* Opcional: mantém o menu no topo */
+    top: 0;
+    z-index: 1000;
 }
+
 nav {
     display: flex;
-    justify-content:space-around; 
-    align-items: center;            
-    padding: 10px 30px;             
-}
-nav img{
-    width: 170px;
-    padding-left: 110px;
-}
-.menu a{
-    color: #f4f0fa;
-}
-a{
-    text-decoration: none;
+    justify-content: space-between; /* Espalha logo, links e ícones */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    justify-content: space-between
 }
 
-li{
-    text-decoration: none;
-    padding: 15px;
-    list-style: none;
-
-}
-.pages, icon{
-    list-style: none;
-    /* border: yellow solid; */
+/* Estilização das listas do menu */
+nav ul {
     display: flex;
-    justify-content: center ;
-    align-items: center; 
-
-
-
-}
-
-.pages a:hover{
-    color:#e9c5ad;
-
-}
-.icon{
     list-style: none;
-    /* border: yellow solid; */
-    display: flex;
-    justify-content: flex-end ;
-    align-items: center;  
-
-}
-.icon a:hover{
-     color:#e9c5ad;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os itens do menu */
 }
 
-main{
-    flex: 1;
+nav img {
+    width: 150px; /* Ajuste o tamanho da logo aqui */
+    display: block;
 }
-footer{
-    background-color:rgb(48, 25, 52) ;
+
+/* Links do menu */
+.menu a {
     color: #f4f0fa;
-    padding: 80px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff7f50; /* Cor ao passar o mouse */
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    flex: 1; /* Faz o main ocupar o espaço sobrando e empurrar o footer */
+    background-color: #F4F0FA;
+}
+
+/* --- CONTAINER DO PORTFÓLIO --- */
+.portifolio-container {
+    padding: 80px 0;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha se tiver muitos projetos */
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* --- CARD DO PROJETO --- */
+.project-card {
+    background: linear-gradient(135deg, #d33c7f 0%, #ff7f50 100%);
+    border-radius: 15px;
+    width: 300px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    transition: transform 0.3s ease;
+}
 
+.project-card:hover {
+    transform: translateY(-10px); /* Card sobe levemente no hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-card h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- BOTÃO --- */
+.btn-visit {
+    background-color: white;
+    color: #e8663e;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-visit:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: rgb(48, 25, 52);
+    color: #f4f0fa;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
 }
