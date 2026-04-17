@@ -81,62 +81,194 @@ li a {
 
 .content ul{
     display: flex;
-    gap: 50px;
-    justify-content: center; /* Centraliza as caixas no meio da tela */
-     /* Alinha o topo delas */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .content img{
     display: block;
     margin: 0 auto 15px auto; 
-    width: 120px; /* Aumentei um pouquinho para destacar */
+    width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 50%; /* Deixa a foto redonda */
+    border-radius: 50%;
 }
 .content h2{
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    
-
+    color: #f4f0fa;
+    font-size: 2em;
 }
 .content h3{
     color: #301934;
     text-align: center;
     padding-bottom: 15px;
+    font-size: 1.3em;
 }
 .content li{
     list-style:none;
     background-color:#c3aec7;
-    border: #301934 solid 1px;
+    border: #301934 solid 2px;
     padding: 25px;
-    width: 450px;              /* AQUI você controla o tamanho do "quadrado" */
-    border-radius: 12px;       /* Pontas arredondadas ficam mais modernas */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra bem levinha */
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 .content li:hover{
-    list-style:none;
-    background-color:#d0bcd3 ;
-    border: #301934 solid 1px;
+    background-color:#d0bcd3;
+    border: #301934 solid 2px;
     padding: 25px;
-    width: 450px;              /* AQUI você controla o tamanho do "quadrado" */
-    border-radius: 12px;       /* Pontas arredondadas ficam mais modernas */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra bem levinha */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
 }
 .content p {
     text-align: justify;
     color:#301934;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* RESPONSIVO - Tablets e abaixo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    nav img {
+        width: 120px;
+        padding-left: 0;
+    }
+    
+    .pages, .icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .pages a, .icon a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    .content ul {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .content li {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .content h2 {
+        font-size: 1.5em;
+        padding: 20px 15px;
+    }
+    
+    footer {
+        padding: 40px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* RESPONSIVO - Celulares pequenos */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    nav img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+    
+    .pages, .icon {
+        gap: 5px;
+    }
+    
+    .pages a, .icon a {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+    
+    .content {
+        min-height: auto;
+    }
+    
+    .content h2 {
+        font-size: 1.2em;
+        padding: 15px 10px;
+    }
+    
+    .content h3 {
+        font-size: 1em;
+    }
+    
+    .content li {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .content p {
+        font-size: 0.85em;
+    }
+    
+    footer {
+        padding: 20px 10px;
+        font-size: 0.8em;
+    }
 }
 main{
     flex: 1;
 }
+
+.Skills {
+    background-color: #f4f0fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.Skills h2 {
+    color: #301934;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.Skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.Skills li {
+    background-color: #c3aec7;
+    border: #301934 solid 2px;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.Skills li:hover {
+    background-color: #d0bcd3;
+    transform: scale(1.05);
+}
+
 footer{
     background-color:rgb(48, 25, 52) ;
     color: #f4f0fa;
     padding: 80px;
     text-align: center;
     justify-content:end;
-
-
 }
